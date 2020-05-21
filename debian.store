@@ -1,1 +1,1 @@
-{"base": "00ec356", "parent": "debian/foxy/trajectory_msgs", "previous": "ba9c69c", "trim": "", "trimbase": ""}
+{"trim": "", "base": "f4ac708", "trimbase": "", "parent": "debian/foxy/trajectory_msgs", "previous": "3bd2090"}
