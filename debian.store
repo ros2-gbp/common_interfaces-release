@@ -1,1 +1,1 @@
-{"base": "1600211", "parent": "debian/foxy/diagnostic_msgs", "previous": "a79c0db", "trim": "", "trimbase": ""}
+{"trim": "", "base": "a2572ed", "trimbase": "", "parent": "debian/foxy/diagnostic_msgs", "previous": "036d5f8"}
