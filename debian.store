@@ -1,1 +1,1 @@
-{"base": "b9a3358", "parent": "debian/foxy/common_interfaces", "previous": "741889b", "trim": "", "trimbase": ""}
+{"trim": "", "base": "8e710ae", "trimbase": "", "parent": "debian/foxy/common_interfaces", "previous": "4130b44"}
