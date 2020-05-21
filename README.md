@@ -1,3 +1,38 @@
+## common_interfaces (foxy) - 2.0.0-1
+
+The packages in the `common_interfaces` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy common_interfaces` on `Thu, 21 May 2020 18:57:02 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_interfaces`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `shape_msgs`
+- `std_msgs`
+- `std_srvs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_interfaces`:
+
+- upstream repository: https://github.com/ros2/common_interfaces.git
+- release repository: https://github.com/ros2-gbp/common_interfaces-release.git
+- rosdistro version: `0.9.0-2`
+- old version: `1.0.0-1`
+- new version: `2.0.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.9.7`
+- catkin_pkg version: `0.4.20`
+- rosdep version: `0.19.0`
+- rosdistro version: `0.8.1`
+- vcstools version: `0.1.42`
+
+
 ## common_interfaces (foxy) - 1.0.0-1
 
 The packages in the `common_interfaces` repository were released into the `foxy` distro by running `/usr/bin/bloom-release -r foxy common_interfaces` on `Thu, 21 May 2020 08:57:18 -0000`
