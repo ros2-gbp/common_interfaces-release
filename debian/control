@@ -1,0 +1,12 @@
+Source: ros-foxy-common-interfaces
+Section: misc
+Priority: optional
+Maintainer: Scott K Logan <scott@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-foxy-ament-cmake, ros-foxy-ament-lint-auto, ros-foxy-ament-lint-common, ros-foxy-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-common-interfaces
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-foxy-actionlib-msgs, ros-foxy-builtin-interfaces, ros-foxy-diagnostic-msgs, ros-foxy-geometry-msgs, ros-foxy-nav-msgs, ros-foxy-sensor-msgs, ros-foxy-shape-msgs, ros-foxy-std-msgs, ros-foxy-std-srvs, ros-foxy-stereo-msgs, ros-foxy-trajectory-msgs, ros-foxy-visualization-msgs, ros-foxy-ros-workspace
+Description: common_interfaces contains messages and services that are widely used by other ROS packages.
