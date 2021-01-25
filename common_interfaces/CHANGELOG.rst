@@ -2,6 +2,9 @@
 Changelog for package common_interfaces
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.2.1 (2021-01-25)
+------------------
+
 2.2.0 (2020-12-10)
 ------------------
 * Update package maintainers. (`#132 <https://github.com/ros2/common_interfaces/issues/132>`_)
