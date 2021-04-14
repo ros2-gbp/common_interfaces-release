@@ -1,0 +1,12 @@
+Source: ros-foxy-sensor-msgs-py
+Section: misc
+Priority: optional
+Maintainer: Michael Carroll <michael@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), python3-pytest, ros-foxy-ament-copyright, ros-foxy-ament-flake8, ros-foxy-ament-pep257, ros-foxy-ros-workspace, python3-all, python3-setuptools
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-foxy-sensor-msgs-py
+Architecture: any
+Depends: ${python3:Depends}, ${misc:Depends}, ros-foxy-sensor-msgs, ros-foxy-ros-workspace
+Description: A package for easy creation and reading of PointCloud2 messages in Python.
