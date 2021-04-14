@@ -10,7 +10,7 @@ Below are the rationales, notes, and caveats for this claim, organized by each r
 
 ### Version Scheme [1.i]
 
-`trajectory_msgs` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#versioning).
+`trajectory_msgs` uses `semver` according to the recommendation for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#versioning).
 
 ### Version Stability [1.ii]
 
@@ -31,7 +31,7 @@ All message and service definition files located in `msg` and `srv` directories 
 
 ## Change Control Process [2]
 
-`trajectory_msgs` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#quality-practices).
+`trajectory_msgs` follows the recommended guidelines for ROS Core packages in the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#quality-practices).
 
 ### Change Requests [2.i]
 
@@ -80,18 +80,18 @@ There are no currently copyrighted source files in this package.
 
 ### Linters and Static Analysis [4.v]
 
-`trajectory_msgs` uses and passes all the standard linters and static analysis tools for its generated C++ and Python code to ensure it follows the [ROS 2 Developer Guide](https://docs.ros.org/en/rolling/Contributing/Developer-Guide.html#linters-and-static-analysis).
+`trajectory_msgs` uses and passes all the standard linters and static analysis tools for its generated C++ and Python code to ensure it follows the [ROS 2 Developer Guide](https://docs.ros.org/en/foxy/Contributing/Developer-Guide.html#linters-and-static-analysis).
 
-Results of the nightly linter tests can be found [here](http://build.ros2.org/view/Rpr/job/Rpr__common_interfaces__ubuntu_focal_amd64/lastCompletedBuild/testReport/trajectory_msgs/).
+Results of the nightly linter tests can be found [here](http://build.ros2.org/view/Fpr/job/Fpr__common_interfaces__ubuntu_focal_amd64/lastCompletedBuild/testReport/trajectory_msgs/).
 
 ## Dependencies [5]
 
 ### Direct Runtime ROS Dependencies [5.i]/[5.ii]
 
 `trajectory_msgs` has the following runtime ROS dependencies, which are at **Quality Level 1**:
-* `builtin_interfaces`: [QUALITY DECLARATION](https://github.com/ros2/rcl_interfaces/tree/master/builtin_interfaces/QUALITY_DECLARATION.md)
+* `builtin_interfaces`: [QUALITY DECLARATION](https://github.com/ros2/rcl_interfaces/tree/foxy/builtin_interfaces/QUALITY_DECLARATION.md)
 * `geometry_msgs`: [QUALITY DECLARATION](../geometry_msgs/QUALITY_DECLARATION.md)
-* `rosidl_default_runtime` [QUALITY DECLARATION](https://github.com/ros2/rosidl_defaults/tree/master/rosidl_default_runtime/QUALITY_DECLARATION.md)
+* `rosidl_default_runtime` [QUALITY DECLARATION](https://github.com/ros2/rosidl_defaults/tree/foxy/rosidl_default_runtime/QUALITY_DECLARATION.md)
 * `std_msgs`: [QUALITY DECLARATION](../std_msgs/QUALITY_DECLARATION.md)
 
 It has several "buildtool" dependencies, which do not affect the resulting quality of the package, because they do not contribute to the public library API.
@@ -104,11 +104,11 @@ It has several "buildtool" dependencies, which do not affect the resulting quali
 
 `trajectory_msgs` supports all of the tier 1 platforms as described in [REP-2000](https://www.ros.org/reps/rep-2000.html#support-tiers), and tests each change against all of them.
 
-Currently nightly results can be seen here:
-* [linux-aarch64_release](https://ci.ros2.org/view/nightly/job/nightly_linux-aarch64_release/lastBuild/testReport/trajectory_msgs/)
-* [linux_release](https://ci.ros2.org/view/nightly/job/nightly_linux_release/lastBuild/testReport/trajectory_msgs/)
-* [mac_osx_release](https://ci.ros2.org/view/nightly/job/nightly_osx_release/lastBuild/testReport/trajectory_msgs/)
-* [windows_release](https://ci.ros2.org/view/nightly/job/nightly_win_rel/lastBuild/testReport/trajectory_msgs/)
+Though there are no nightly jobs for foxy outside of linux, each change is tested on ci.ros2.org.
+* [linux-aarch64](https://ci.ros2.org/job/ci_linux-aarch64)
+* [linux](https://ci.ros2.org/job/ci_linux)
+* [mac_osx](https://ci.ros2.org/job/ci_osx)
+* [windows](https://ci.ros2.org/job/ci_windows)
 
 ## Vulnerability Disclosure Policy [7.i]
 
