@@ -1,1 +1,1 @@
-{"base": "6403e409", "parent": "debian/rolling/geometry_msgs", "previous": "99399e43", "trim": "", "trimbase": ""}
+{"base": "62fcc1e2", "parent": "debian/galactic/geometry_msgs", "previous": "c8650f6d", "trim": "", "trimbase": ""}
