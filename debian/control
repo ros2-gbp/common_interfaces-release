@@ -1,0 +1,12 @@
+Source: ros-dashing-common-interfaces
+Section: misc
+Priority: optional
+Maintainer: Scott K Logan <scott@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-dashing-ament-cmake, ros-dashing-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-dashing-common-interfaces
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-dashing-actionlib-msgs, ros-dashing-builtin-interfaces, ros-dashing-diagnostic-msgs, ros-dashing-geometry-msgs, ros-dashing-nav-msgs, ros-dashing-sensor-msgs, ros-dashing-shape-msgs, ros-dashing-std-msgs, ros-dashing-std-srvs, ros-dashing-stereo-msgs, ros-dashing-trajectory-msgs, ros-dashing-visualization-msgs, ros-dashing-ros-workspace
+Description: common_interfaces contains messages and services that are widely used by other ROS packages.
