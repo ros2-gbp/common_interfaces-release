@@ -10,5 +10,4 @@ geometry_msgs/PoseStamped goal
 # relax the constraint in x and y before failing.
 float32 tolerance
 ---
-# Array of poses from start to goal if one was successfully found.
 Path plan
