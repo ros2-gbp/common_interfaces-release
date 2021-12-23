@@ -1,29 +1,33 @@
 // Copyright (c) 2013, Open Source Robotics Foundation, Inc.
+// All rights reserved.
+//
+// Software License Agreement (BSD License 2.0)
 //
 // Redistribution and use in source and binary forms, with or without
-// modification, are permitted provided that the following conditions are met:
+// modification, are permitted provided that the following conditions
+// are met:
 //
-//    * Redistributions of source code must retain the above copyright
-//      notice, this list of conditions and the following disclaimer.
+//  * Redistributions of source code must retain the above copyright
+//    notice, this list of conditions and the following disclaimer.
+//  * Redistributions in binary form must reproduce the above
+//    copyright notice, this list of conditions and the following
+//    disclaimer in the documentation and/or other materials provided
+//    with the distribution.
+//  * Neither the name of the Open Source Robotics Foundation, Inc. nor the names of its
+//    contributors may be used to endorse or promote products derived
+//    from this software without specific prior written permission.
 //
-//    * Redistributions in binary form must reproduce the above copyright
-//      notice, this list of conditions and the following disclaimer in the
-//      documentation and/or other materials provided with the distribution.
-//
-//    * Neither the name of the copyright holder nor the names of its
-//      contributors may be used to endorse or promote products derived from
-//      this software without specific prior written permission.
-//
-// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
-// AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
-// IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
-// ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
-// LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
-// CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
-// SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
-// INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
-// CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
-// ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+// THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+// "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+// LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS
+// FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE
+// COPYRIGHT OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT,
+// INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING,
+// BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES;
+// LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
+// CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT
+// LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN
+// ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
 // POSSIBILITY OF SUCH DAMAGE.
 
 // This file is originally from:
@@ -155,6 +159,23 @@ inline void PointCloud2Modifier::clear()
 }
 
 
+/**
+ * @brief Function setting some fields in a PointCloud and adjusting the
+ *        internals of the PointCloud2
+ * @param n_fields the number of fields to add. The fields are given as
+ *        triplets: name of the field as char*, number of elements in the
+ *        field, the datatype of the elements in the field
+ *
+ * E.g, you create your PointCloud2 message with XYZ/RGB as follows:
+ * <PRE>
+ *   setPointCloud2FieldsByString(cloud_msg, 4, "x", 1, sensor_msgs::msg::PointField::FLOAT32,
+ *                                              "y", 1, sensor_msgs::msg::PointField::FLOAT32,
+ *                                              "z", 1, sensor_msgs::msg::PointField::FLOAT32,
+ *                                              "rgb", 1, sensor_msgs::msg::PointField::FLOAT32);
+ * </PRE>
+ * WARNING: THIS DOES NOT TAKE INTO ACCOUNT ANY PADDING AS DONE UNTIL HYDRO
+ * For simple usual cases, the overloaded setPointCloud2FieldsByString is what you want.
+ */
 inline void PointCloud2Modifier::setPointCloud2Fields(int n_fields, ...)
 {
   cloud_msg_.fields.clear();
@@ -177,6 +198,16 @@ inline void PointCloud2Modifier::setPointCloud2Fields(int n_fields, ...)
   cloud_msg_.data.resize(cloud_msg_.height * cloud_msg_.row_step);
 }
 
+/**
+ * @brief Function setting some fields in a PointCloud and adjusting the
+ *        internals of the PointCloud2
+ * @param n_fields the number of fields to add. The fields are given as
+ *        strings: "xyz" (3 floats), "rgb" (3 uchar stacked in a float),
+ *        "rgba" (4 uchar stacked in a float)
+ * @return void
+ *
+ * WARNING: THIS FUNCTION DOES ADD ANY NECESSARY PADDING TRANSPARENTLY
+ */
 inline void PointCloud2Modifier::setPointCloud2FieldsByString(int n_fields, ...)
 {
   cloud_msg_.fields.clear();

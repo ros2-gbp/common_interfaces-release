@@ -69,8 +69,9 @@ if(BUILD_TESTING)
     test/test_image_encodings.cpp
     test/test_pointcloud_conversion.cpp
     test/test_pointcloud_iterator.cpp)
-  rosidl_get_typesupport_target(cpp_typesupport_target ${PROJECT_NAME} "rosidl_typesupport_cpp")
-  target_link_libraries(test_sensor_msgs "${cpp_typesupport_target}")
+  if(TARGET test_sensor_msgs)
+    rosidl_target_interfaces(test_sensor_msgs ${PROJECT_NAME} "rosidl_typesupport_cpp")
+  endif()
 endif()
 
 ament_export_dependencies(rosidl_default_runtime)
