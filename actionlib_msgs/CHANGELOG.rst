@@ -2,6 +2,9 @@
 Changelog for package actionlib_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+2.0.5 (2021-12-23)
+------------------
+
 2.0.4 (2021-04-14)
 ------------------
 * Updated links to foxy branch
