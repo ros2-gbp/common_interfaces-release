@@ -1,0 +1,12 @@
+Source: ros-galactic-common-interfaces
+Section: misc
+Priority: optional
+Maintainer: Michael Carroll <michael@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-galactic-ament-cmake, ros-galactic-ament-lint-auto, ros-galactic-ament-lint-common, ros-galactic-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-galactic-common-interfaces
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-galactic-actionlib-msgs, ros-galactic-builtin-interfaces, ros-galactic-diagnostic-msgs, ros-galactic-geometry-msgs, ros-galactic-nav-msgs, ros-galactic-sensor-msgs, ros-galactic-shape-msgs, ros-galactic-std-msgs, ros-galactic-std-srvs, ros-galactic-stereo-msgs, ros-galactic-trajectory-msgs, ros-galactic-visualization-msgs, ros-galactic-ros-workspace
+Description: common_interfaces contains messages and services that are widely used by other ROS packages.
