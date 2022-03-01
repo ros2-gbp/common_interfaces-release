@@ -2,6 +2,11 @@
 Changelog for package shape_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.1.0 (2022-03-01)
+------------------
+* Interface packages should fully <depend> on the interface packages that they depend on (`#173 <https://github.com/ros2/common_interfaces/issues/173>`_)
+* Contributors: Grey
+
 4.0.0 (2021-12-14)
 ------------------
 * Add prism type to the SolidPrimitive.msg (`#166 <https://github.com/ros2/common_interfaces/issues/166>`_) (`#167 <https://github.com/ros2/common_interfaces/issues/167>`_)
