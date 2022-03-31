@@ -2,6 +2,11 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.2.1 (2022-03-31)
+------------------
+* Move the find_package statements for BUILD_TESTING  (`#186 <https://github.com/ros2/common_interfaces/issues/186>`_)
+* Contributors: Michael Jeronimo
+
 4.2.0 (2022-03-30)
 ------------------
 
