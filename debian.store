@@ -1,1 +1,1 @@
-{"base": "cb31621a", "parent": "debian/rolling/actionlib_msgs", "previous": "8e5c2b43", "trim": "", "trimbase": ""}
+{"base": "d489a1fe", "parent": "debian/humble/actionlib_msgs", "previous": "c75798e3", "trim": "", "trimbase": ""}
