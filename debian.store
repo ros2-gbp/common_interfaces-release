@@ -1,1 +1,1 @@
-{"base": "2217ab14", "parent": "debian/rolling/trajectory_msgs", "previous": "ca2b4465", "trim": "", "trimbase": ""}
+{"base": "29d5b8ac", "parent": "debian/humble/trajectory_msgs", "previous": "76fec135", "trim": "", "trimbase": ""}
