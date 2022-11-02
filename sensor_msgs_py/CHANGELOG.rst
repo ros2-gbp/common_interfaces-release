@@ -2,6 +2,9 @@
 Changelog for package sensor_msgs_py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+4.6.1 (2022-11-02)
+------------------
+
 4.6.0 (2022-09-13)
 ------------------
 * Add support for non standard point step sizes (`#199 <https://github.com/ros2/common_interfaces/issues/199>`_)
