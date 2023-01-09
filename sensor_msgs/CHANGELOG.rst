@@ -2,27 +2,10 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.6.1 (2022-11-02)
-------------------
-* Add NV21 and NV24 to colour formats (`#205 <https://github.com/ros2/common_interfaces/issues/205>`_)
-* Update BatteryState.msg (`#206 <https://github.com/ros2/common_interfaces/issues/206>`_)
-* Contributors: Borong Yuan, Geoffrey Biggs
-
-4.6.0 (2022-09-13)
-------------------
-* use regex for matching cv types (`#202 <https://github.com/ros2/common_interfaces/issues/202>`_)
-* Fix outdated file path for image_encodings (`#200 <https://github.com/ros2/common_interfaces/issues/200>`_)
-* Use uint32_t for pointcloud2 resize method (`#195 <https://github.com/ros2/common_interfaces/issues/195>`_)
-* Retain width and height after resize for master (`#193 <https://github.com/ros2/common_interfaces/issues/193>`_)
-* Contributors: Kenji Brameld, Tianyu Li
-
-4.5.0 (2022-05-19)
+4.2.3 (2023-01-09)
 ------------------
 
-4.4.0 (2022-04-29)
-------------------
-
-4.3.0 (2022-04-29)
+4.2.2 (2022-05-19)
 ------------------
 
 4.2.1 (2022-03-31)

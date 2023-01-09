@@ -33,7 +33,6 @@
 #define SENSOR_MSGS__IMAGE_ENCODINGS_HPP_
 
 #include <cstdlib>
-#include <regex>
 #include <stdexcept>
 #include <string>
 
@@ -110,16 +109,13 @@ const char ABSTRACT_ENCODING_PREFIXES[][5] = {
   "8UC", "8SC", "16UC", "16SC", "32SC", "32FC", "64FC"
 };
 
-const std::regex cv_type_regex("(8|16|32|64)(U|S|F)C([0-9]*)");
-
 // Utility functions for inspecting an encoding string
 static inline bool isColor(const std::string & encoding)
 {
   return encoding == RGB8 || encoding == BGR8 ||
          encoding == RGBA8 || encoding == BGRA8 ||
          encoding == RGB16 || encoding == BGR16 ||
-         encoding == RGBA16 || encoding == BGRA16 ||
-         encoding == NV21 || encoding == NV24;
+         encoding == RGBA16 || encoding == BGRA16;
 }
 
 static inline bool isMono(const std::string & encoding)
@@ -176,10 +172,24 @@ static inline int numChannels(const std::string & encoding)
   }
 
   // Now all the generic content encodings
-  std::cmatch m;
-  // ex. 8UC -> 1, 8UC5 -> 5
-  if (std::regex_match(encoding.c_str(), m, cv_type_regex)) {
-    return (m[3] == "") ? 1 : std::atoi(m[3].str().c_str());
+  // TODO(clalancette): Rewrite with regex when ROS supports C++11
+  for (size_t i = 0; i < sizeof(ABSTRACT_ENCODING_PREFIXES) / sizeof(*ABSTRACT_ENCODING_PREFIXES);
+    i++)
+  {
+    std::string prefix = ABSTRACT_ENCODING_PREFIXES[i];
+    if (encoding.substr(0, prefix.size()) != prefix) {
+      continue;
+    }
+    if (encoding.size() == prefix.size()) {
+      return 1;  // ex. 8UC -> 1
+    }
+    int n_channel = atoi(
+      encoding.substr(
+        prefix.size(), encoding.size() - prefix.size()
+      ).c_str());  // ex. 8UC5 -> 5
+    if (n_channel != 0) {
+      return n_channel;  // valid encoding string
+    }
   }
 
   if (encoding == YUV422 ||
@@ -226,10 +236,24 @@ static inline int bitDepth(const std::string & encoding)
   }
 
   // Now all the generic content encodings
-  std::cmatch m;
-  // ex. 8UC -> 8, 8UC10 -> 10
-  if (std::regex_match(encoding.c_str(), m, cv_type_regex)) {
-    return std::atoi(m[0].str().c_str());
+  // TODO(clalancette): Rewrite with regex when ROS supports C++11
+  for (size_t i = 0; i < sizeof(ABSTRACT_ENCODING_PREFIXES) / sizeof(*ABSTRACT_ENCODING_PREFIXES);
+    i++)
+  {
+    std::string prefix = ABSTRACT_ENCODING_PREFIXES[i];
+    if (encoding.substr(0, prefix.size()) != prefix) {
+      continue;
+    }
+    if (encoding.size() == prefix.size()) {
+      return atoi(prefix.c_str());  // ex. 8UC -> 8
+    }
+    int n_channel = atoi(
+      encoding.substr(
+        prefix.size(), encoding.size() - prefix.size()
+      ).c_str());  // ex. 8UC10 -> 10
+    if (n_channel != 0) {
+      return atoi(prefix.c_str());  // valid encoding string
+    }
   }
 
   if (encoding == YUV422 ||
