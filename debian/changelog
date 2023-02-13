@@ -1,0 +1,164 @@
+ros-rolling-sensor-msgs (4.7.0-1jammy) jammy; urgency=high
+
+  * Update common_interfaces to C++17. (#215 <https://github.com/ros2/common_interfaces/issues/215>)
+  * [rolling] Update maintainers - 2022-11-07 (#210 <https://github.com/ros2/common_interfaces/issues/210>)
+  * Replaced non-ASCII dash symbol with ASCII dash (#208 <https://github.com/ros2/common_interfaces/issues/208>)
+  * Contributors: Audrow Nash, Chris Lalancette, Ivan Zatevakhin
+
+ -- Tully Foote <tfoote@openrobotics.org>  Mon, 13 Feb 2023 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.6.1-1jammy) jammy; urgency=high
+
+  * Add NV21 and NV24 to colour formats (#205 <https://github.com/ros2/common_interfaces/issues/205>)
+  * Update BatteryState.msg (#206 <https://github.com/ros2/common_interfaces/issues/206>)
+  * Contributors: Borong Yuan, Geoffrey Biggs
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Wed, 02 Nov 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.6.0-1jammy) jammy; urgency=high
+
+  * use regex for matching cv types (#202 <https://github.com/ros2/common_interfaces/issues/202>)
+  * Fix outdated file path for image_encodings (#200 <https://github.com/ros2/common_interfaces/issues/200>)
+  * Use uint32_t for pointcloud2 resize method (#195 <https://github.com/ros2/common_interfaces/issues/195>)
+  * Retain width and height after resize for master (#193 <https://github.com/ros2/common_interfaces/issues/193>)
+  * Contributors: Kenji Brameld, Tianyu Li
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 13 Sep 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.5.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Thu, 19 May 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.4.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Fri, 29 Apr 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.3.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Fri, 29 Apr 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.2.1-1jammy) jammy; urgency=high
+
+  * Move the find_package statements for BUILD_TESTING  (#186 <https://github.com/ros2/common_interfaces/issues/186>)
+  * Contributors: Michael Jeronimo
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Thu, 31 Mar 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.2.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Wed, 30 Mar 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.1.1-1jammy) jammy; urgency=high
+
+  * Feedback on conditional sensor_msgs_library target (#1 <https://github.com/ros2/common_interfaces/issues/1>) (#183 <https://github.com/ros2/common_interfaces/issues/183>)
+  * [Fix] Fix image_encodings.hpp's URL in README (#184 <https://github.com/ros2/common_interfaces/issues/184>)
+  * [Fix] Fix fill_image.hpp's URL in README (#182 <https://github.com/ros2/common_interfaces/issues/182>)
+  * Add sensor_msgs_library target and install headers to include/${PROJECT_NAME} (#178 <https://github.com/ros2/common_interfaces/issues/178>)
+  * Contributors: Homalozoa X, Pablo Garrido, Shane Loretz
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Sat, 26 Mar 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.1.0-1jammy) jammy; urgency=high
+
+  * Interface packages should fully <depend> on the interface packages that they depend on (#173 <https://github.com/ros2/common_interfaces/issues/173>)
+  * Add YUV420 and YUV444 to image encodings (#172 <https://github.com/ros2/common_interfaces/issues/172>)
+  * Contributors: Grey, Hemal Shah
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 01 Mar 2022 00:00:00 -0000
+
+ros-rolling-sensor-msgs (4.0.0-1jammy) jammy; urgency=high
+
+  * Cleanup mislabeled BSD license (#83 <https://github.com/ros2/common_interfaces/issues/83>)
+  * Update maintainers to Geoffrey Biggs and Tully Foote (#163 <https://github.com/ros2/common_interfaces/issues/163>)
+  * Fix rosdoc2 warnings in sensor_msgs. (#162 <https://github.com/ros2/common_interfaces/issues/162>)
+  * Add equidistant distortion model (#160 <https://github.com/ros2/common_interfaces/issues/160>)
+  * Contributors: Audrow Nash, Chris Lalancette, Martin Günther, Tully Foote
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 14 Dec 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (3.0.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 24 Aug 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.3.0-1jammy) jammy; urgency=high
+
+  * Use rosidl_get_typesupport_target() (#156 <https://github.com/ros2/common_interfaces/issues/156>)
+  * Update CompressedImage documentation: add 'tiff' as a supported format (#154 <https://github.com/ros2/common_interfaces/issues/154>)
+  * Contributors: Ivan Santiago Paunovic, Shane Loretz
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Wed, 11 Aug 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.2.3-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 27 Apr 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.2.2-1jammy) jammy; urgency=high
+
+  * Change index.ros.org -> docs.ros.org. (#149 <https://github.com/ros2/common_interfaces/issues/149>)
+  * updating quality declaration links (re: ros2/docs.ros2.org#52 <https://github.com/ros2/docs.ros2.org/issues/52>) (#145 <https://github.com/ros2/common_interfaces/issues/145>)
+  * Contributors: Chris Lalancette, shonigmann
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 06 Apr 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.2.1-1jammy) jammy; urgency=high
+
+  * Fix PointCloud2Iterator namespacing in docs (#139 <https://github.com/ros2/common_interfaces/issues/139>)
+  * Contributors: Andre Nguyen
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Mon, 25 Jan 2021 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.2.0-1jammy) jammy; urgency=high
+
+  * Add coverage/performance to qd for sensor_msgs (#137 <https://github.com/ros2/common_interfaces/issues/137>)
+  * Update QDs to QL 1 (#135 <https://github.com/ros2/common_interfaces/issues/135>)
+  * Update package maintainers. (#132 <https://github.com/ros2/common_interfaces/issues/132>)
+  * Updated Quality Level to 2 (#131 <https://github.com/ros2/common_interfaces/issues/131>)
+  * Contributors: Alejandro Hernández Cordero, Michel Hidalgo, Stephen Brawner
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Thu, 10 Dec 2020 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.1.0-1jammy) jammy; urgency=high
+
+
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.0.2-1jammy) jammy; urgency=high
+
+  * Missing cstring header for memcpy in fill_image.hpp (#126 <https://github.com/ros2/common_interfaces/issues/126>)
+  * Update Quality levels to level 3 (#124 <https://github.com/ros2/common_interfaces/issues/124>)
+  * Add Security Vulnerability Policy pointing to REP-2006. (#120 <https://github.com/ros2/common_interfaces/issues/120>)
+  * Contributors: Chris Lalancette, Jose Luis Rivero, brawner
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 21 Jul 2020 00:00:00 -0000
+
+ros-rolling-sensor-msgs (2.0.1-1jammy) jammy; urgency=high
+
+  * QD Update Version Stability to stable version (#121 <https://github.com/ros2/common_interfaces/issues/121>)
+  * Contributors: Alejandro Hernández Cordero
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Tue, 26 May 2020 00:00:00 -0000
+
+ros-rolling-sensor-msgs (1.0.0-1jammy) jammy; urgency=high
+
+  * Improve clarification of MultiDOFJointState (#114 <https://github.com/ros2/common_interfaces/issues/114>)
+  * Comment on common PointField names (#112 <https://github.com/ros2/common_interfaces/issues/112>)
+  * Fix sensor_msgs README (#111 <https://github.com/ros2/common_interfaces/issues/111>)
+  * Add current-level quality declarations (#109 <https://github.com/ros2/common_interfaces/issues/109>)
+  * Contributors: Tully Foote, brawner
+
+ -- Geoffrey Biggs <geoff@openrobotics.org>  Wed, 20 May 2020 00:00:00 -0000
+
+
