@@ -1,0 +1,12 @@
+Source: ros-iron-common-interfaces
+Section: misc
+Priority: optional
+Maintainer: Tully Foote <tfoote@openrobotics.org>
+Build-Depends: debhelper (>= 9.0.0), ros-iron-ament-cmake, ros-iron-ament-lint-auto <!nocheck>, ros-iron-ament-lint-common <!nocheck>, ros-iron-ros-workspace
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-iron-common-interfaces
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-iron-actionlib-msgs, ros-iron-builtin-interfaces, ros-iron-diagnostic-msgs, ros-iron-geometry-msgs, ros-iron-nav-msgs, ros-iron-sensor-msgs, ros-iron-shape-msgs, ros-iron-std-msgs, ros-iron-std-srvs, ros-iron-stereo-msgs, ros-iron-trajectory-msgs, ros-iron-visualization-msgs, ros-iron-ros-workspace
+Description: common_interfaces contains messages and services that are widely used by other ROS packages.
