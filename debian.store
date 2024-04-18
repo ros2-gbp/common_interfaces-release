@@ -1,1 +1,1 @@
-{"base": "ddba0374", "parent": "debian/rolling/sensor_msgs_py", "previous": "05063f7a", "trim": "", "trimbase": ""}
+{"base": "eae08473", "parent": "debian/jazzy/sensor_msgs_py", "previous": "4bac666f", "trim": "", "trimbase": ""}
