@@ -1,3 +1,39 @@
+## common_interfaces (jazzy) - 5.3.5-1
+
+The packages in the `common_interfaces` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --track jazzy --rosdistro jazzy common_interfaces` on `Wed, 24 Apr 2024 17:10:43 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_interfaces`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `sensor_msgs_py`
+- `shape_msgs`
+- `std_msgs`
+- `std_srvs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_interfaces`:
+
+- upstream repository: https://github.com/ros2/common_interfaces.git
+- release repository: https://github.com/ros2-gbp/common_interfaces-release.git
+- rosdistro version: `5.3.4-2`
+- old version: `5.3.4-2`
+- new version: `5.3.5-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.22.2`
+- rosdistro version: `0.9.0`
+- vcstools version: `0.1.42`
+
+
 ## common_interfaces (rolling) - 5.3.4-1
 
 The packages in the `common_interfaces` repository were released into the `rolling` distro by running `/usr/bin/bloom-release --rosdistro rolling --track rolling common_interfaces` on `Tue, 16 Apr 2024 13:17:29 -0000`
