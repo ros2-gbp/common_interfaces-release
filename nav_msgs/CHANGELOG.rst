@@ -2,6 +2,12 @@
 Changelog for package nav_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+5.4.0 (2024-04-26)
+------------------
+* Fix typo in nav_msgs/LoadMap (`#246 <https://github.com/ros2/common_interfaces/issues/246>`_)
+* Update quality declaration documents (`#245 <https://github.com/ros2/common_interfaces/issues/245>`_)
+* Contributors: Christophe Bedard
+
 5.3.4 (2024-04-16)
 ------------------
 * Removed TODO (`#243 <https://github.com/ros2/common_interfaces/issues/243>`_)
