@@ -2,15 +2,35 @@
 Changelog for package sensor_msgs_py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.2.4 (2024-05-21)
+5.0.1 (2024-05-21)
 ------------------
 
-4.2.3 (2023-01-09)
+5.0.0 (2023-04-11)
 ------------------
-* Add support for non standard point step sizes (`#199 <https://github.com/ros2/common_interfaces/issues/199>`_) (`#211 <https://github.com/ros2/common_interfaces/issues/211>`_)
-* Contributors: Geoffrey Biggs
+* Add missing dep for sensor_msgs_py (`#217 <https://github.com/ros2/common_interfaces/issues/217>`_)
+* Contributors: Yadu
 
-4.2.2 (2022-05-19)
+4.7.0 (2023-02-13)
+------------------
+* [rolling] Update maintainers - 2022-11-07 (`#210 <https://github.com/ros2/common_interfaces/issues/210>`_)
+* Contributors: Audrow Nash
+
+4.6.1 (2022-11-02)
+------------------
+
+4.6.0 (2022-09-13)
+------------------
+* Add support for non standard point step sizes (`#199 <https://github.com/ros2/common_interfaces/issues/199>`_)
+* Remove reference to old implementation (`#198 <https://github.com/ros2/common_interfaces/issues/198>`_)
+* Contributors: Florian Vahl
+
+4.5.0 (2022-05-19)
+------------------
+
+4.4.0 (2022-04-29)
+------------------
+
+4.3.0 (2022-04-29)
 ------------------
 
 4.2.1 (2022-03-31)

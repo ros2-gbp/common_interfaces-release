@@ -2,9 +2,9 @@
 Changelog for package geometry_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.2.4 (2024-05-21)
+5.0.1 (2024-05-21)
 ------------------
-* Create new messages with all fields needed to define a velocity and transform it  (`#240 <https://github.com/ros2/common_interfaces/issues/240>`_) (`#249 <https://github.com/ros2/common_interfaces/issues/249>`_)
+* Create new messages with all fields needed to define a velocity and transform it  (`#240 <https://github.com/ros2/common_interfaces/issues/240>`_) (`#250 <https://github.com/ros2/common_interfaces/issues/250>`_)
   Co-authored-by: Dr. Denis <denis@stoglrobotics.de>
   Co-authored-by: Addisu Z. Taddese <addisuzt@intrinsic.ai>
   Co-authored-by: Tully Foote <tullyfoote@intrinsic.ai>
@@ -12,10 +12,28 @@ Changelog for package geometry_msgs
   Co-authored-by: Alejandro Hernández Cordero <alejandro@openrobotics.org>
 * Contributors: mergify[bot]
 
-4.2.3 (2023-01-09)
+5.0.0 (2023-04-11)
 ------------------
 
-4.2.2 (2022-05-19)
+4.7.0 (2023-02-13)
+------------------
+* Update common_interfaces to C++17. (`#215 <https://github.com/ros2/common_interfaces/issues/215>`_)
+* [rolling] Update maintainers - 2022-11-07 (`#210 <https://github.com/ros2/common_interfaces/issues/210>`_)
+* Contributors: Audrow Nash, Chris Lalancette
+
+4.6.1 (2022-11-02)
+------------------
+
+4.6.0 (2022-09-13)
+------------------
+
+4.5.0 (2022-05-19)
+------------------
+
+4.4.0 (2022-04-29)
+------------------
+
+4.3.0 (2022-04-29)
 ------------------
 
 4.2.1 (2022-03-31)
