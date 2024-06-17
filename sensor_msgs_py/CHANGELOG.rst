@@ -2,6 +2,11 @@
 Changelog for package sensor_msgs_py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+5.4.1 (2024-06-17)
+------------------
+* Fix formatting in sensor_msgs_py (`#248 <https://github.com/ros2/common_interfaces/issues/248>`_)
+* Contributors: Christophe Bedard
+
 5.4.0 (2024-04-26)
 ------------------
 
