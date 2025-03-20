@@ -1,3 +1,39 @@
+## common_interfaces (humble) - 4.8.0-1
+
+The packages in the `common_interfaces` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble common_interfaces` on `Thu, 20 Mar 2025 14:20:22 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_interfaces`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `sensor_msgs_py`
+- `shape_msgs`
+- `std_msgs`
+- `std_srvs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_interfaces`:
+
+- upstream repository: https://github.com/ros2/common_interfaces.git
+- release repository: https://github.com/ros2-gbp/common_interfaces-release.git
+- rosdistro version: `4.2.4-1`
+- old version: `4.2.4-1`
+- new version: `4.8.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.12.0`
+- catkin_pkg version: `1.0.0`
+- rosdep version: `0.25.1`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## common_interfaces (jazzy) - 5.3.6-1
 
 The packages in the `common_interfaces` repository were released into the `jazzy` distro by running `/usr/bin/bloom-release --rosdistro jazzy --track jazzy common_interfaces` on `Thu, 20 Mar 2025 13:49:23 -0000`
