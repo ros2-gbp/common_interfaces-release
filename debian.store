@@ -1,1 +1,1 @@
-{"base": "ca8fa03b7", "parent": "debian/rolling/sensor_msgs", "previous": "ddeab4cf4", "trim": "", "trimbase": ""}
+{"base": "e250de417b27", "parent": "debian/kilted/sensor_msgs", "previous": "cc9b87590d4c", "trim": "", "trimbase": ""}
