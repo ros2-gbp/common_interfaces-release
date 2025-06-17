@@ -1,6 +1,6 @@
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Changelog for package common_interfaces
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Changelog for package actionlib_msgs
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 4.9.0 (2025-06-17)
 ------------------
@@ -28,6 +28,8 @@ Changelog for package common_interfaces
 
 4.1.0 (2022-03-01)
 ------------------
+* Interface packages should fully <depend> on the interface packages that they depend on (`#173 <https://github.com/ros2/common_interfaces/issues/173>`_)
+* Contributors: Grey
 
 4.0.0 (2021-12-14)
 ------------------
