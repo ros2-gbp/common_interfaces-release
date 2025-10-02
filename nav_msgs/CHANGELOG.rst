@@ -2,10 +2,30 @@
 Changelog for package nav_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.5.1 (2025-10-01)
+5.9.0 (2025-10-02)
 ------------------
-* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
-* Contributors: mergify[bot]
+* Adding the Trajectory and trajectoryPoint messages (`#296 <https://github.com/ros2/common_interfaces/issues/296>`_)
+* Contributors: Steve Macenski
+
+5.8.3 (2025-10-01)
+------------------
+
+5.8.2 (2025-07-29)
+------------------
+
+5.8.1 (2025-07-01)
+------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_)
+* Contributors: mosfet80
+
+5.8.0 (2025-06-24)
+------------------
+
+5.7.0 (2025-05-19)
+------------------
+
+5.6.0 (2025-04-25)
+------------------
 
 5.5.0 (2025-03-20)
 ------------------

@@ -2,10 +2,33 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.5.1 (2025-10-01)
+5.9.0 (2025-10-02)
 ------------------
-* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
-* Contributors: mergify[bot]
+
+5.8.3 (2025-10-01)
+------------------
+* [ADD] missing PointField type entries (`#301 <https://github.com/ros2/common_interfaces/issues/301>`_)
+* Update point_cloud2_iterator.hpp (`#298 <https://github.com/ros2/common_interfaces/issues/298>`_)
+* Contributors: Adam Leeper, wodtko
+
+5.8.2 (2025-07-29)
+------------------
+
+5.8.1 (2025-07-01)
+------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_)
+* Contributors: mosfet80
+
+5.8.0 (2025-06-24)
+------------------
+* Enhance NV12 and NV21 Support in sensor_msgs::image_encodings (`#264 <https://github.com/ros2/common_interfaces/issues/264>`_)
+* Contributors: Zhaoyuan Cheng
+
+5.7.0 (2025-05-19)
+------------------
+
+5.6.0 (2025-04-25)
+------------------
 
 5.5.0 (2025-03-20)
 ------------------
