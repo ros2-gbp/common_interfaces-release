@@ -1,11 +1,10 @@
-cmake_minimum_required(VERSION 3.20)
+cmake_minimum_required(VERSION 3.5)
 
 project(nav_msgs)
 
-# Default to C++17
+# Default to C++14
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 17)
-  set(CMAKE_CXX_STANDARD_REQUIRED ON)
+  set(CMAKE_CXX_STANDARD 14)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -24,8 +23,6 @@ set(msg_files
   "msg/OccupancyGrid.msg"
   "msg/Odometry.msg"
   "msg/Path.msg"
-  "msg/Trajectory.msg"
-  "msg/TrajectoryPoint.msg"
 )
 set(srv_files
   "srv/GetMap.srv"
@@ -34,6 +31,7 @@ set(srv_files
   "srv/SetMap.srv"
 )
 
+# TODO(wjwwood): port the action GetMap from ROS 1, once actions are supported.
 rosidl_generate_interfaces(${PROJECT_NAME}
   ${msg_files}
   ${srv_files}

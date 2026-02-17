@@ -2,20 +2,21 @@
 <?xml-model href="http://download.ros.org/schema/package_format2.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="2">
   <name>common_interfaces</name>
-  <version>5.9.1</version>
+  <version>4.9.1</version>
   <description>common_interfaces contains messages and services that are widely used by other ROS packages.</description>
 
+  <maintainer email="geoff@openrobotics.org">Geoffrey Biggs</maintainer>
   <maintainer email="tfoote@openrobotics.org">Tully Foote</maintainer>
 
   <license>Apache License 2.0</license>
 
-  <author email="geoff@openrobotics.org">Geoffrey Biggs</author>
   <author email="michael@openrobotics.org">Michael Carroll</author>
   <author email="michel@ekumenlabs.com">Michel Hidalgo</author>
   <author email="scott@openrobotics.org">Scott K Logan</author>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
 
+  <exec_depend>actionlib_msgs</exec_depend>
   <exec_depend>builtin_interfaces</exec_depend>
   <exec_depend>diagnostic_msgs</exec_depend>
   <exec_depend>geometry_msgs</exec_depend>

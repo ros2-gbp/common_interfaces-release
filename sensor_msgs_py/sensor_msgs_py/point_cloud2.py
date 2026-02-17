@@ -27,7 +27,15 @@
 # POSSIBILITY OF SUCH DAMAGE.
 
 
-# Serialization of sensor_msgs.PointCloud2 messages.
+"""
+Serialization of sensor_msgs.PointCloud2 messages.
+
+Author: Tim Field
+ROS 2 port by Sebastian Grans
+File originally ported from:
+https://github.com/ros/common_msgs/blob/f48b00d43cdb82ed9367e0956db332484f676598/
+sensor_msgs/src/sensor_msgs/point_cloud2.py
+"""
 
 import array
 from collections import namedtuple
@@ -147,8 +155,7 @@ def read_points_numpy(
     :param reshape_organized_cloud: Returns the array as an 2D organized point cloud if set.
     :return: Numpy array containing all points.
     """
-    assert all(cloud.fields[0].datatype == field.datatype for field in cloud.fields[1:]
-               if field_names is None or field.name in field_names), \
+    assert all(cloud.fields[0].datatype == field.datatype for field in cloud.fields[1:]), \
         'All fields need to have the same datatype. Use `read_points()` otherwise.'
     structured_numpy_array = read_points(
         cloud, field_names, skip_nans, uvs, reshape_organized_cloud)
@@ -226,9 +233,9 @@ def dtype_from_fields(fields: Iterable[PointField], point_step: Optional[int] = 
 
     # Create dtype
     dtype_dict = {
-        'names': field_names,
-        'formats': field_datatypes,
-        'offsets': field_offsets
+            'names': field_names,
+            'formats': field_datatypes,
+            'offsets': field_offsets
     }
     if point_step is not None:
         dtype_dict['itemsize'] = point_step
@@ -238,8 +245,7 @@ def dtype_from_fields(fields: Iterable[PointField], point_step: Optional[int] = 
 def create_cloud(
         header: Header,
         fields: Iterable[PointField],
-        points: Iterable,
-        point_step: Optional[int] = None) -> PointCloud2:
+        points: Iterable) -> PointCloud2:
     """
     Create a sensor_msgs.msg.PointCloud2 message.
 
@@ -250,10 +256,6 @@ def create_cloud(
                    for each point, with the elements of each iterable being the
                    values of the fields for that point (in the same order as
                    the fields parameter)
-    :param point_step: Point step size in bytes. If not provided, it is calculated
-                       from the given fields, except when 'points' is a structured
-                       NumPy array, in which case points.dtype.itemsize is used.
-                       (Type: optional of integer)
     :return: The point cloud as sensor_msgs.msg.PointCloud2
     """
     # Check if input is numpy array
@@ -266,11 +268,9 @@ def create_cloud(
             # Convert unstructured to structured array
             points = unstructured_to_structured(
                 points,
-                dtype=dtype_from_fields(fields, point_step))
+                dtype=dtype_from_fields(fields))
         else:
-            assert points.dtype == dtype_from_fields(
-                fields,
-                point_step or points.dtype.itemsize), \
+            assert points.dtype == dtype_from_fields(fields), \
                 'PointFields and structured NumPy array dtype do not match for all fields! \
                     Check their field order, names and types.'
     else:
@@ -278,7 +278,7 @@ def create_cloud(
         points = np.array(
             # Points need to be tuples in the structured array
             list(map(tuple, points)),
-            dtype=dtype_from_fields(fields, point_step))
+            dtype=dtype_from_fields(fields))
 
     # Handle organized clouds
     assert len(points.shape) <= 2, \
