@@ -2,27 +2,14 @@
 Changelog for package std_srvs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.5.2 (2026-02-25)
+5.3.7 (2026-02-25)
 ------------------
 
-5.5.1 (2025-10-01)
-------------------
-* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
-* Contributors: mergify[bot]
-
-5.5.0 (2025-03-20)
+5.3.6 (2025-03-20)
 ------------------
 
-5.4.2 (2024-11-20)
+5.3.5 (2024-04-24)
 ------------------
-
-5.4.1 (2024-06-17)
-------------------
-
-5.4.0 (2024-04-26)
-------------------
-* Update quality declaration documents (`#245 <https://github.com/ros2/common_interfaces/issues/245>`_)
-* Contributors: Christophe Bedard
 
 5.3.4 (2024-04-16)
 ------------------

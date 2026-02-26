@@ -3,19 +3,19 @@ Common interfaces is a metapackage (collection of packages) that includes the st
 
 # List of Packages
 
-The following packages are contained in the common_interfaces meta package. The links below point to Kilted Kaiju API documentation for each package.
+The following packages are contained in the common_interfaces meta package. The links below point to Jazzy Jalisco API documentation for each package.
 
-* [diagnostic_msgs](http://docs.ros.org/en/kilted/p/diagnostic_msgs/)
-* [geometry_msgs](http://docs.ros.org/en/kilted/p/geometry_msgs/)
-* [nav_msgs](http://docs.ros.org/en/kilted/p/nav_msgs/)
-* [sensor_msgs](http://docs.ros.org/en/kilted/p/sensor_msgs/)
-* [sensor_msgs_py](http://docs.ros.org/en/kilted/p/sensor_msgs_py/)
-* [shape_msgs](http://docs.ros.org/en/kilted/p/shape_msgs/)
-* [std_msgs](http://docs.ros.org/en/kilted/p/std_msgs/)
-* [std_srvs](http://docs.ros.org/en/kilted/p/std_srvs/)
-* [stereo_msgs](http://docs.ros.org/en/kilted/p/stereo_msgs/)
-* [trajectory_msgs](http://docs.ros.org/en/kilted/p/trajectory_msgs/)
-* [visualization_msgs](http://docs.ros.org/en/kilted/p/visualization_msgs/)
+* [diagnostic_msgs](http://docs.ros.org/en/jazzy/p/diagnostic_msgs/)
+* [geometry_msgs](http://docs.ros.org/en/jazzy/p/geometry_msgs/)
+* [nav_msgs](http://docs.ros.org/en/jazzy/p/nav_msgs/)
+* [sensor_msgs](http://docs.ros.org/en/jazzy/p/sensor_msgs/)
+* [sensor_msgs_py](http://docs.ros.org/en/jazzy/p/sensor_msgs_py/)
+* [shape_msgs](http://docs.ros.org/en/jazzy/p/shape_msgs/)
+* [std_msgs](http://docs.ros.org/en/jazzy/p/std_msgs/)
+* [std_srvs](http://docs.ros.org/en/jazzy/p/std_srvs/)
+* [stereo_msgs](http://docs.ros.org/en/jazzy/p/stereo_msgs/)
+* [trajectory_msgs](http://docs.ros.org/en/jazzy/p/trajectory_msgs/)
+* [visualization_msgs](http://docs.ros.org/en/jazzy/p/visualization_msgs/)
 
 ## Purpose
 
