@@ -2,6 +2,9 @@
 Changelog for package std_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+5.5.2 (2026-02-25)
+------------------
+
 5.5.1 (2025-10-01)
 ------------------
 * Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
