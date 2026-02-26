@@ -1,27 +1,25 @@
-# common_interfaces
-Common interfaces is a metapackage (collection of packages) that includes the standard set of messages (.msg) and services (.srv) available on all ROS systems.
+# visualization_msgs
 
-# List of Packages
+This package provides messages for visualizing 3D information in ROS GUI programs, particularly RViz.
 
-The following packages are contained in the common_interfaces meta package. The links below point to Jazzy Jalisco API documentation for each package.
+These messages were ported from ROS 1 and for now the [visualization_msgs wiki](http://wiki.ros.org/visualization_msgs) is still a good place for information about these messages and how they are used.
 
-* [diagnostic_msgs](http://docs.ros.org/en/jazzy/p/diagnostic_msgs/)
-* [geometry_msgs](http://docs.ros.org/en/jazzy/p/geometry_msgs/)
-* [nav_msgs](http://docs.ros.org/en/jazzy/p/nav_msgs/)
-* [sensor_msgs](http://docs.ros.org/en/jazzy/p/sensor_msgs/)
-* [sensor_msgs_py](http://docs.ros.org/en/jazzy/p/sensor_msgs_py/)
-* [shape_msgs](http://docs.ros.org/en/jazzy/p/shape_msgs/)
-* [std_msgs](http://docs.ros.org/en/jazzy/p/std_msgs/)
-* [std_srvs](http://docs.ros.org/en/jazzy/p/std_srvs/)
-* [stereo_msgs](http://docs.ros.org/en/jazzy/p/stereo_msgs/)
-* [trajectory_msgs](http://docs.ros.org/en/jazzy/p/trajectory_msgs/)
-* [visualization_msgs](http://docs.ros.org/en/jazzy/p/visualization_msgs/)
+For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros.org/en/rolling/Concepts/About-ROS-Interfaces.html).
 
-## Purpose
+## Messages (.msg)
+* [ImageMarker](msg/ImageMarker.msg): A marker to overlay on displayed images.
+* [InteractiveMarker](msg/InteractiveMarker.msg): A user interaction marker for manipulating objects in 3-dimensional space in GUI programs, like RViz.
+* [InteractiveMarkerControl](msg/InteractiveMarkerControl.msg): Represents a control that is to be displayed together with an interactive marker.
+* [InteractiveMarkerFeedback](msg/InteractiveMarkerFeedback.msg): Feedback message sent back from the GUI, e.g. when the status of an interactive marker was modified by the user.
+* [InteractiveMarkerInit](msg/InteractiveMarkerInit.msg): Used for sending initial interactive marker descriptions.
+* [InteractiveMarkerPose](msg/InteractiveMarkerPose.msg): The pose of the interactive marker.
+* [InteractiveMarkerUpdate](msg/InteractiveMarkerUpdate.msg): The top-level message for sending data from the interactive marker server to the client (i.e. rviz).
+* [Marker](msg/Marker.msg): A non-interactive marker for displaying annotations in 3-dimensional space.
+* [MarkerArray](msg/MarkerArray.msg): An array of markers.
+* [MenuEntry](msg/MenuEntry.msg): Used to describe the menu/submenu/subsubmenu/etc tree.
 
-Isolating the messages to communicate between stacks in a shared dependency allows nodes in dependent stacks to communicate without requiring dependencies upon each other.
-This repository has been designed to contain the most common messages used between multiple packages to provide a shared dependency which will eliminate a problematic circular dependency.
+## Services (.srv)
+* [GetInteractiveMarkers.srv](srv/GetInteractiveMarkers.srv): Get the currently available interactive markers.
 
-## Contributing
-
-For how to contribute see [CONTRIBUTING.md](common_interfaces/CONTRIBUTING.md)
+## Quality Declaration
+This package claims to be in the **Quality Level 2** category, see the [Quality Declaration](QUALITY_DECLARATION.md) for more details.
