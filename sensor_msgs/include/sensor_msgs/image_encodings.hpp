@@ -33,6 +33,7 @@
 #define SENSOR_MSGS__IMAGE_ENCODINGS_HPP_
 
 #include <cstdlib>
+#include <regex>
 #include <stdexcept>
 #include <string>
 
@@ -91,17 +92,23 @@ const char BAYER_BGGR16[] = "bayer_bggr16";
 const char BAYER_GBRG16[] = "bayer_gbrg16";
 const char BAYER_GRBG16[] = "bayer_grbg16";
 
-// Miscellaneous
+// YUV formats
 // YUV 4:2:2 encodings with an 8-bit depth
-// UYUV version: http://www.fourcc.org/pixel-format/yuv-uyvy
-const char YUV422[] = "yuv422";
-// YUYV version: http://www.fourcc.org/pixel-format/yuv-yuy2/
-const char YUV422_YUY2[] = "yuv422_yuy2";
+// https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-packed-yuv.html#id1
+// fourcc: UYVY
+const char UYVY[] = "uyvy";
+const char YUV422[] = "yuv422";  // deprecated
+// fourcc: YUYV
+const char YUYV[] = "yuyv";
+const char YUV422_YUY2[] = "yuv422_yuy2";  // deprecated
+
 // YUV 4:2:0 encodings with an 8-bit depth
-// NV21: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html
+// NV12 & NV21: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html#nv12-nv21-nv12m-and-nv21m
+const char NV12[] = "nv12";
 const char NV21[] = "nv21";
+
 // YUV 4:4:4 encodings with 8-bit depth
-// NV24: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html
+// NV24: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html#nv24-and-nv42
 const char NV24[] = "nv24";
 
 // Prefixes for abstract image encodings
@@ -109,13 +116,19 @@ const char ABSTRACT_ENCODING_PREFIXES[][5] = {
   "8UC", "8SC", "16UC", "16SC", "32SC", "32FC", "64FC"
 };
 
+const std::regex cv_type_regex("(8|16|32|64)(U|S|F)C([0-9]*)");
+
 // Utility functions for inspecting an encoding string
 static inline bool isColor(const std::string & encoding)
 {
   return encoding == RGB8 || encoding == BGR8 ||
          encoding == RGBA8 || encoding == BGRA8 ||
          encoding == RGB16 || encoding == BGR16 ||
-         encoding == RGBA16 || encoding == BGRA16;
+         encoding == RGBA16 || encoding == BGRA16 ||
+         encoding == YUV422 || encoding == YUV422_YUY2 ||
+         encoding == UYVY || encoding == YUYV ||
+         encoding == NV12 || encoding == NV21 ||
+         encoding == NV24;
 }
 
 static inline bool isMono(const std::string & encoding)
@@ -172,28 +185,17 @@ static inline int numChannels(const std::string & encoding)
   }
 
   // Now all the generic content encodings
-  // TODO(clalancette): Rewrite with regex when ROS supports C++11
-  for (size_t i = 0; i < sizeof(ABSTRACT_ENCODING_PREFIXES) / sizeof(*ABSTRACT_ENCODING_PREFIXES);
-    i++)
-  {
-    std::string prefix = ABSTRACT_ENCODING_PREFIXES[i];
-    if (encoding.substr(0, prefix.size()) != prefix) {
-      continue;
-    }
-    if (encoding.size() == prefix.size()) {
-      return 1;  // ex. 8UC -> 1
-    }
-    int n_channel = atoi(
-      encoding.substr(
-        prefix.size(), encoding.size() - prefix.size()
-      ).c_str());  // ex. 8UC5 -> 5
-    if (n_channel != 0) {
-      return n_channel;  // valid encoding string
-    }
+  std::cmatch m;
+  // ex. 8UC -> 1, 8UC5 -> 5
+  if (std::regex_match(encoding.c_str(), m, cv_type_regex)) {
+    return (m[3] == "") ? 1 : std::atoi(m[3].str().c_str());
   }
 
   if (encoding == YUV422 ||
     encoding == YUV422_YUY2 ||
+    encoding == UYVY ||
+    encoding == YUYV ||
+    encoding == NV12 ||
     encoding == NV21 ||
     encoding == NV24)
   {
@@ -236,28 +238,17 @@ static inline int bitDepth(const std::string & encoding)
   }
 
   // Now all the generic content encodings
-  // TODO(clalancette): Rewrite with regex when ROS supports C++11
-  for (size_t i = 0; i < sizeof(ABSTRACT_ENCODING_PREFIXES) / sizeof(*ABSTRACT_ENCODING_PREFIXES);
-    i++)
-  {
-    std::string prefix = ABSTRACT_ENCODING_PREFIXES[i];
-    if (encoding.substr(0, prefix.size()) != prefix) {
-      continue;
-    }
-    if (encoding.size() == prefix.size()) {
-      return atoi(prefix.c_str());  // ex. 8UC -> 8
-    }
-    int n_channel = atoi(
-      encoding.substr(
-        prefix.size(), encoding.size() - prefix.size()
-      ).c_str());  // ex. 8UC10 -> 10
-    if (n_channel != 0) {
-      return atoi(prefix.c_str());  // valid encoding string
-    }
+  std::cmatch m;
+  // ex. 8UC -> 8, 8UC10 -> 10
+  if (std::regex_match(encoding.c_str(), m, cv_type_regex)) {
+    return std::atoi(m[0].str().c_str());
   }
 
   if (encoding == YUV422 ||
     encoding == YUV422_YUY2 ||
+    encoding == UYVY ||
+    encoding == YUYV ||
+    encoding == NV12 ||
     encoding == NV21 ||
     encoding == NV24)
   {

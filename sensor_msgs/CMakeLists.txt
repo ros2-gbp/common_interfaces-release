@@ -1,10 +1,11 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 
 project(sensor_msgs)
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
   add_compile_options(-Wall -Wextra -Wpedantic)
@@ -63,7 +64,7 @@ if(BUILD_TESTING)
   ament_lint_auto_find_test_dependencies()
 endif()
 
-if(cpp_typesupport_target)
+if(TARGET "${cpp_typesupport_target}")
   add_library(${PROJECT_NAME}_library INTERFACE)
   target_include_directories(${PROJECT_NAME}_library INTERFACE
   "$<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>"

@@ -2,22 +2,111 @@
 Changelog for package sensor_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-4.9.1 (2026-02-16)
+5.5.2 (2026-02-25)
 ------------------
 
-4.9.0 (2025-06-17)
+5.5.1 (2025-10-01)
+------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
+* Contributors: mergify[bot]
+
+5.5.0 (2025-03-20)
+------------------
+* Add NV12 to color formats (`#253 <https://github.com/ros2/common_interfaces/issues/253>`_)
+* Contributors: Lukas Schäper
+
+5.4.2 (2024-11-20)
 ------------------
 
-4.8.0 (2025-03-20)
+5.4.1 (2024-06-17)
 ------------------
 
-4.2.4 (2024-05-21)
+5.4.0 (2024-04-26)
+------------------
+* Update quality declaration documents (`#245 <https://github.com/ros2/common_interfaces/issues/245>`_)
+* Contributors: Christophe Bedard
+
+5.3.4 (2024-04-16)
 ------------------
 
-4.2.3 (2023-01-09)
+5.3.3 (2024-04-10)
 ------------------
 
-4.2.2 (2022-05-19)
+5.3.2 (2024-04-10)
+------------------
+* Clarify the license. (`#241 <https://github.com/ros2/common_interfaces/issues/241>`_)
+  In particular, every package in this repository is Apache 2.0
+  licensed except for sensor_msgs_py.  So move the CONTRIBUTING.md
+  and LICENSE files down into the individual packages, and
+  make sure that sensor_msgs_py has the correct CONTRIBUTING.md
+  file (it already had the correct LICENSE file).
+* [J-Turtle] Fix uninitialized values in NavSatFix and add missing NavSatStatus UNKNOWN (`#220 <https://github.com/ros2/common_interfaces/issues/220>`_)
+  * Fix unitialized values in NavSatFix and add missing UNKNOWN
+  * Fixes `#196 <https://github.com/ros2/common_interfaces/issues/196>`_
+  * Fix default initialization instead of constants
+  * Define SERVICE_UNKNOWN
+  Co-authored-by: Tully Foote <tully.foote@gmail.com>
+  Co-authored-by: Martin Pecka <peci1@seznam.cz>
+* Contributors: Chris Lalancette, Ryan
+
+5.3.1 (2024-03-28)
+------------------
+* Use target qualifier for checking the cpp typesupport exists (`#238 <https://github.com/ros2/common_interfaces/issues/238>`_)
+* Contributors: Ryan
+
+5.3.0 (2024-01-24)
+------------------
+
+5.2.2 (2023-12-26)
+------------------
+* sensor_msgs/CompressedImage: updated description of format field (`#231 <https://github.com/ros2/common_interfaces/issues/231>`_)
+* Contributors: Kenji Brameld
+
+5.2.1 (2023-11-06)
+------------------
+* Return true for isColor if format is YUYV or UYUV (`#229 <https://github.com/ros2/common_interfaces/issues/229>`_)
+* Contributors: Kenji Brameld
+
+5.2.0 (2023-06-07)
+------------------
+
+5.1.0 (2023-04-27)
+------------------
+
+5.0.0 (2023-04-11)
+------------------
+* update YUV format codes and documentation (`#214 <https://github.com/ros2/common_interfaces/issues/214>`_)
+* sensor_msgs/Range lacks variance field (`#181 <https://github.com/ros2/common_interfaces/issues/181>`_)
+* Contributors: Christian Rauch, El Jawad Alaa
+
+4.7.0 (2023-02-13)
+------------------
+* Update common_interfaces to C++17. (`#215 <https://github.com/ros2/common_interfaces/issues/215>`_)
+* [rolling] Update maintainers - 2022-11-07 (`#210 <https://github.com/ros2/common_interfaces/issues/210>`_)
+* Replaced non-ASCII dash symbol with ASCII dash (`#208 <https://github.com/ros2/common_interfaces/issues/208>`_)
+* Contributors: Audrow Nash, Chris Lalancette, Ivan Zatevakhin
+
+4.6.1 (2022-11-02)
+------------------
+* Add NV21 and NV24 to colour formats (`#205 <https://github.com/ros2/common_interfaces/issues/205>`_)
+* Update BatteryState.msg (`#206 <https://github.com/ros2/common_interfaces/issues/206>`_)
+* Contributors: Borong Yuan, Geoffrey Biggs
+
+4.6.0 (2022-09-13)
+------------------
+* use regex for matching cv types (`#202 <https://github.com/ros2/common_interfaces/issues/202>`_)
+* Fix outdated file path for image_encodings (`#200 <https://github.com/ros2/common_interfaces/issues/200>`_)
+* Use uint32_t for pointcloud2 resize method (`#195 <https://github.com/ros2/common_interfaces/issues/195>`_)
+* Retain width and height after resize for master (`#193 <https://github.com/ros2/common_interfaces/issues/193>`_)
+* Contributors: Kenji Brameld, Tianyu Li
+
+4.5.0 (2022-05-19)
+------------------
+
+4.4.0 (2022-04-29)
+------------------
+
+4.3.0 (2022-04-29)
 ------------------
 
 4.2.1 (2022-03-31)
