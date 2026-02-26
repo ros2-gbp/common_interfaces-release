@@ -1,27 +1,14 @@
-# common_interfaces
-Common interfaces is a metapackage (collection of packages) that includes the standard set of messages (.msg) and services (.srv) available on all ROS systems.
+# shape_msgs
 
-# List of Packages
+This package provides several messages and services for describing 3-dimensional shapes.
 
-The following packages are contained in the common_interfaces meta package. The links below point to Jazzy Jalisco API documentation for each package.
+For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros.org/en/rolling/Concepts/About-ROS-Interfaces.html).
 
-* [diagnostic_msgs](http://docs.ros.org/en/jazzy/p/diagnostic_msgs/)
-* [geometry_msgs](http://docs.ros.org/en/jazzy/p/geometry_msgs/)
-* [nav_msgs](http://docs.ros.org/en/jazzy/p/nav_msgs/)
-* [sensor_msgs](http://docs.ros.org/en/jazzy/p/sensor_msgs/)
-* [sensor_msgs_py](http://docs.ros.org/en/jazzy/p/sensor_msgs_py/)
-* [shape_msgs](http://docs.ros.org/en/jazzy/p/shape_msgs/)
-* [std_msgs](http://docs.ros.org/en/jazzy/p/std_msgs/)
-* [std_srvs](http://docs.ros.org/en/jazzy/p/std_srvs/)
-* [stereo_msgs](http://docs.ros.org/en/jazzy/p/stereo_msgs/)
-* [trajectory_msgs](http://docs.ros.org/en/jazzy/p/trajectory_msgs/)
-* [visualization_msgs](http://docs.ros.org/en/jazzy/p/visualization_msgs/)
+## Messages (.msg)
+* [Mesh](msg/Mesh.msg): Holds information describing a mesh for visualization and collision detections.
+* [MeshTriangle](msg/MeshTriangle.msg): A single triangle of a mesh.
+* [Plane](msg/Plane.msg): Representation of a plane, using the plane equation ax + by + cz + d = 0.
+* [SolidPrimitive](msg/SolidPrimitive.msg): Describe a simple shape primitive like a box, a sphere, a cylinder, and a cone.
 
-## Purpose
-
-Isolating the messages to communicate between stacks in a shared dependency allows nodes in dependent stacks to communicate without requiring dependencies upon each other.
-This repository has been designed to contain the most common messages used between multiple packages to provide a shared dependency which will eliminate a problematic circular dependency.
-
-## Contributing
-
-For how to contribute see [CONTRIBUTING.md](common_interfaces/CONTRIBUTING.md)
+## Quality Declaration
+This package claims to be in the **Quality Level 1** category, see the [Quality Declaration](QUALITY_DECLARATION.md) for more details.
