@@ -2,18 +2,59 @@
 Changelog for package geometry_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.3.7 (2026-02-25)
-------------------
-* Update Inertia.msg documentation to clarify inertia is express about the center of mass (`#313 <https://github.com/ros2/common_interfaces/issues/313>`_) (`#315 <https://github.com/ros2/common_interfaces/issues/315>`_)
-* Contributors: mergify[bot]
-
-5.3.6 (2025-03-20)
+5.9.2 (2026-04-14)
 ------------------
 
-5.3.5 (2024-04-24)
+* Clarify ``Inertia.msg`` expresses inertia about the center of mass (`#313 <https://github.com/ros2/common_interfaces/issues/313>`_)
+
+* Contributors: Andrew Symington
+
+5.9.1 (2025-10-17)
 ------------------
+
+5.9.0 (2025-10-02)
+------------------
+
+5.8.3 (2025-10-01)
+------------------
+
+5.8.2 (2025-07-29)
+------------------
+
+5.8.1 (2025-07-01)
+------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_)
+* Contributors: mosfet80
+
+5.8.0 (2025-06-24)
+------------------
+* Removed deprecated geometry_msgs/Pose2d (`#283 <https://github.com/ros2/common_interfaces/issues/283>`_)
+* Contributors: Alejandro Hernández Cordero
+
+5.7.0 (2025-05-19)
+------------------
+
+5.6.0 (2025-04-25)
+------------------
+
+5.5.0 (2025-03-20)
+------------------
+* Complete Removal of PoseStampedArray (`#270 <https://github.com/ros2/common_interfaces/issues/270>`_)
+* Move geometry_msgs/PoseStampedArray to nav_msgs/Goals (`#269 <https://github.com/ros2/common_interfaces/issues/269>`_)
+* Add PoseStampedArray (`#262 <https://github.com/ros2/common_interfaces/issues/262>`_)
+* Contributors: Tony Najjar, Tully Foote
+
+5.4.2 (2024-11-20)
+------------------
+
+5.4.1 (2024-06-17)
+------------------
+
+5.4.0 (2024-04-26)
+------------------
+* Update quality declaration documents (`#245 <https://github.com/ros2/common_interfaces/issues/245>`_)
 * Remove references to index.ros.org. (`#244 <https://github.com/ros2/common_interfaces/issues/244>`_)
-* Contributors: Chris Lalancette
+* Contributors: Chris Lalancette, Christophe Bedard
 
 5.3.4 (2024-04-16)
 ------------------

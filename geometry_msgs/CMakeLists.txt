@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.20)
 
 project(geometry_msgs)
 
@@ -30,7 +30,6 @@ set(msg_files
   "msg/PolygonInstanceStamped.msg"
   "msg/PolygonStamped.msg"
   "msg/Pose.msg"
-  "msg/Pose2D.msg"
   "msg/PoseArray.msg"
   "msg/PoseStamped.msg"
   "msg/PoseWithCovariance.msg"

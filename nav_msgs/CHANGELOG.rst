@@ -2,18 +2,50 @@
 Changelog for package nav_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.3.7 (2026-02-25)
+5.9.1 (2025-10-17)
 ------------------
-* Adding the Trajectory and trajectoryPoint messages (`#296 <https://github.com/ros2/common_interfaces/issues/296>`_) (`#318 <https://github.com/ros2/common_interfaces/issues/318>`_)
-* Contributors: mergify[bot]
 
-5.3.6 (2025-03-20)
+5.9.0 (2025-10-02)
 ------------------
-* adding nav_msgs/goals to Jazzy (`#271 <https://github.com/ros2/common_interfaces/issues/271>`_)
+* Adding the Trajectory and trajectoryPoint messages (`#296 <https://github.com/ros2/common_interfaces/issues/296>`_)
 * Contributors: Steve Macenski
 
-5.3.5 (2024-04-24)
+5.8.3 (2025-10-01)
 ------------------
+
+5.8.2 (2025-07-29)
+------------------
+
+5.8.1 (2025-07-01)
+------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_)
+* Contributors: mosfet80
+
+5.8.0 (2025-06-24)
+------------------
+
+5.7.0 (2025-05-19)
+------------------
+
+5.6.0 (2025-04-25)
+------------------
+
+5.5.0 (2025-03-20)
+------------------
+* Move geometry_msgs/PoseStampedArray to nav_msgs/Goals (`#269 <https://github.com/ros2/common_interfaces/issues/269>`_)
+* Contributors: Tully Foote
+
+5.4.2 (2024-11-20)
+------------------
+
+5.4.1 (2024-06-17)
+------------------
+
+5.4.0 (2024-04-26)
+------------------
+* Fix typo in nav_msgs/LoadMap (`#246 <https://github.com/ros2/common_interfaces/issues/246>`_)
+* Update quality declaration documents (`#245 <https://github.com/ros2/common_interfaces/issues/245>`_)
+* Contributors: Christophe Bedard
 
 5.3.4 (2024-04-16)
 ------------------
