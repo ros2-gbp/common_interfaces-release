@@ -18,6 +18,7 @@ For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros
 * [PolygonInstance](msg/PolygonInstance.msg): A specification of a polygon where the first and last points are assumed to be connected. Contains an identification field for disambiguation of multiple instances.
 * [PolygonInstanceStamped](msg/PolygonInstanceStamped.msg): A Polygon with reference coordinate frame and timestamp. Contains an identification field for disambiguation of multiple instances.
 * [PolygonStamped](msg/PolygonStamped.msg): A Polygon with reference coordinate frame and timestamp.
+* [Pose2D](msg/Pose2D.msg): **Deprecated as of Foxy and will potentially be removed in any following release.**
 * [PoseArray](msg/PoseArray.msg): An array of poses with a header for global reference.
 * [Pose](msg/Pose.msg): A representation of pose in free space, composed of position and orientation.
 * [PoseStamped](msg/PoseStamped.msg): A Pose with reference coordinate frame and timestamp.
@@ -33,6 +34,8 @@ For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros
 * [TwistWithCovarianceStamped](msg/TwistWithCovarianceStamped.msg): An estimated twist with reference coordinate frame and timestamp.
 * [Vector3](msg/Vector3.msg): Represents a vector in 3-dimensional free space.
 * [Vector3Stamped](msg/Vector3Stamped.msg): Represents a Vector3 with reference coordinate frame and timestamp.
+* [VelocityStamped](msg/VelocityStamped.msg): A fully-qualified velocity in 3-dimensional space with timestamp.
+* [VelocityWithCovarianceStamped](msg/VelocityWithCovarianceStamped.msg): A fully-qualified velocity in 3-dimensional space with uncertainty and timestamp.
 * [Wrench](msg/Wrench.msg): Represents force in free space, separated into its linear and angular parts.
 * [WrenchStamped](msg/WrenchStamped.msg): A wrench with reference coordinate frame and timestamp.
 

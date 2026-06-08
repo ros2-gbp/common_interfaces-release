@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.5)
 
-project(std_srvs)
+project(actionlib_msgs)
 
 # Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
@@ -12,15 +12,18 @@ if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
 endif()
 
 find_package(ament_cmake REQUIRED)
+find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
+find_package(std_msgs REQUIRED)
 
-set(srv_files
-  "srv/Empty.srv"
-  "srv/SetBool.srv"
-  "srv/Trigger.srv"
+set(msg_files
+  "msg/GoalID.msg"
+  "msg/GoalStatus.msg"
+  "msg/GoalStatusArray.msg"
 )
 rosidl_generate_interfaces(${PROJECT_NAME}
-  ${srv_files}
+  ${msg_files}
+  DEPENDENCIES builtin_interfaces std_msgs
   ADD_LINTER_TESTS
 )
 
