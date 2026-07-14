@@ -103,7 +103,8 @@ const char YUYV[] = "yuyv";
 const char YUV422_YUY2[] = "yuv422_yuy2";  // deprecated
 
 // YUV 4:2:0 encodings with an 8-bit depth
-// NV21: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html#nv12-nv21-nv12m-and-nv21m
+// NV12 & NV21: https://www.kernel.org/doc/html/latest/userspace-api/media/v4l/pixfmt-yuv-planar.html#nv12-nv21-nv12m-and-nv21m
+const char NV12[] = "nv12";
 const char NV21[] = "nv21";
 
 // YUV 4:4:4 encodings with 8-bit depth
@@ -126,7 +127,8 @@ static inline bool isColor(const std::string & encoding)
          encoding == RGBA16 || encoding == BGRA16 ||
          encoding == YUV422 || encoding == YUV422_YUY2 ||
          encoding == UYVY || encoding == YUYV ||
-         encoding == NV21 || encoding == NV24;
+         encoding == NV12 || encoding == NV21 ||
+         encoding == NV24;
 }
 
 static inline bool isMono(const std::string & encoding)
@@ -146,6 +148,11 @@ static inline bool hasAlpha(const std::string & encoding)
 {
   return encoding == RGBA8 || encoding == BGRA8 ||
          encoding == RGBA16 || encoding == BGRA16;
+}
+
+static inline bool isPlanar(const std::string & encoding)
+{
+  return encoding == NV12 || encoding == NV21 || encoding == NV24;
 }
 
 static inline int numChannels(const std::string & encoding)
@@ -189,11 +196,15 @@ static inline int numChannels(const std::string & encoding)
     return (m[3] == "") ? 1 : std::atoi(m[3].str().c_str());
   }
 
+  if (encoding == NV12 ||
+    encoding == NV21)
+  {
+    return 1;
+  }
   if (encoding == YUV422 ||
     encoding == YUV422_YUY2 ||
     encoding == UYVY ||
     encoding == YUYV ||
-    encoding == NV21 ||
     encoding == NV24)
   {
     return 2;
@@ -245,6 +256,7 @@ static inline int bitDepth(const std::string & encoding)
     encoding == YUV422_YUY2 ||
     encoding == UYVY ||
     encoding == YUYV ||
+    encoding == NV12 ||
     encoding == NV21 ||
     encoding == NV24)
   {
@@ -254,6 +266,19 @@ static inline int bitDepth(const std::string & encoding)
   throw std::runtime_error("Unknown encoding " + encoding);
   return -1;
 }
+
+static inline float getHeightScaling(const std::string & encoding)
+{
+  if (isPlanar(encoding)) {
+    if (encoding == NV12 ||
+      encoding == NV21)
+    {
+      return 1.5f;
+    }
+  }
+  return 1.0f;
+}
+
 }  // namespace image_encodings
 }  // namespace sensor_msgs
 
