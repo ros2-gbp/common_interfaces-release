@@ -1,27 +1,14 @@
-# common_interfaces
-Common interfaces is a metapackage (collection of packages) that includes the standard set of messages (.msg) and services (.srv) available on all ROS systems.
+# trajectory_msgs
 
-# List of Packages
+This package provides several messages for defining robotic joint trajectories.
 
-The following packages are contained in the common_interfaces meta package. The links below point to Humble Hawksbill API documentation for each package.
+For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros.org/en/rolling/Concepts/About-ROS-Interfaces.html).
 
-* [diagnostic_msgs](http://docs.ros.org/en/humble/p/diagnostic_msgs/)
-* [geometry_msgs](http://docs.ros.org/en/humble/p/geometry_msgs/)
-* [nav_msgs](http://docs.ros.org/en/humble/p/nav_msgs/)
-* [sensor_msgs](http://docs.ros.org/en/humble/p/sensor_msgs/)
-* [sensor_msgs_py](http://docs.ros.org/en/humble/p/sensor_msgs_py/)
-* [shape_msgs](http://docs.ros.org/en/humble/p/shape_msgs/)
-* [std_msgs](http://docs.ros.org/en/humble/p/std_msgs/)
-* [std_srvs](http://docs.ros.org/en/humble/p/std_srvs/)
-* [stereo_msgs](http://docs.ros.org/en/humble/p/stereo_msgs/)
-* [trajectory_msgs](http://docs.ros.org/en/humble/p/trajectory_msgs/)
-* [visualization_msgs](http://docs.ros.org/en/humble/p/visualization_msgs/)
+## Messages (.msg)
+* [JointTrajectory](msg/JointTrajectory.msg): A coordinated sequence of joint configurations to be reached at prescribed time points.
+* [JointTrajectoryPoint](msg/JointTrajectoryPoint.msg): A single configuration for multiple joints in a JointTrajectory.
+* [MultiDOFJointTrajectory](msg/MultiDOFJointTrajectory.msg): A representation of a multi-dof joint trajectory (each point is a transformation).
+* [MultiDOFJointTrajectoryPoint](msg/MultiDOFJointTrajectoryPoint.msg): A single configuration for multiple joints in a MultiDOFJointTrajectory.
 
-## Purpose
-
-Isolating the messages to communicate between stacks in a shared dependency allows nodes in dependent stacks to communicate without requiring dependencies upon each other.
-This repository has been designed to contain the most common messages used between multiple packages to provide a shared dependency which will eliminate a problematic circular dependency.
-
-## Contributing
-
-For how to contribute see [CONTRIBUTING.md](common_interfaces/CONTRIBUTING.md)
+## Quality Declaration
+This package claims to be in the **Quality Level 2** category, see the [Quality Declaration](QUALITY_DECLARATION.md) for more details.
