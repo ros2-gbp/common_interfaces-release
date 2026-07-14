@@ -1,17 +1,27 @@
-# diagnostic_msgs
+# common_interfaces
+Common interfaces is a metapackage (collection of packages) that includes the standard set of messages (.msg) and services (.srv) available on all ROS systems.
 
-This package provides several messages and services for ROS node diagnostics.
+# List of Packages
 
-For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros.org/en/rolling/Concepts/About-ROS-Interfaces.html).
+The following packages are contained in the common_interfaces meta package. The links below point to Kilted Kaiju API documentation for each package.
 
-## Messages (.msg)
-* [DiagnosticArray](msg/DiagnosticArray.msg): Used to send diagnostic information about the state of the robot.
-* [DiagnosticStatus](msg/DiagnosticStatus.msg): Holds the status of an individual component of the robot.
-* [KeyValue](msg/KeyValue.msg): Associates diagnostic values with their labels.
+* [diagnostic_msgs](http://docs.ros.org/en/kilted/p/diagnostic_msgs/)
+* [geometry_msgs](http://docs.ros.org/en/kilted/p/geometry_msgs/)
+* [nav_msgs](http://docs.ros.org/en/kilted/p/nav_msgs/)
+* [sensor_msgs](http://docs.ros.org/en/kilted/p/sensor_msgs/)
+* [sensor_msgs_py](http://docs.ros.org/en/kilted/p/sensor_msgs_py/)
+* [shape_msgs](http://docs.ros.org/en/kilted/p/shape_msgs/)
+* [std_msgs](http://docs.ros.org/en/kilted/p/std_msgs/)
+* [std_srvs](http://docs.ros.org/en/kilted/p/std_srvs/)
+* [stereo_msgs](http://docs.ros.org/en/kilted/p/stereo_msgs/)
+* [trajectory_msgs](http://docs.ros.org/en/kilted/p/trajectory_msgs/)
+* [visualization_msgs](http://docs.ros.org/en/kilted/p/visualization_msgs/)
 
-## Services (.srv)
-* [AddDiagnostics](srv/AddDiagnostics.srv): Used as part of the process for loading analyzers at runtime, not for use as a standalone service.
-* [SelfTest](srv/SelfTest.srv): Call this service to perform a diagnostic check.
+## Purpose
 
-## Quality Declaration
-This package claims to be in the **Quality Level 1** category, see the [Quality Declaration](QUALITY_DECLARATION.md) for more details.
+Isolating the messages to communicate between stacks in a shared dependency allows nodes in dependent stacks to communicate without requiring dependencies upon each other.
+This repository has been designed to contain the most common messages used between multiple packages to provide a shared dependency which will eliminate a problematic circular dependency.
+
+## Contributing
+
+For how to contribute see [CONTRIBUTING.md](common_interfaces/CONTRIBUTING.md)
