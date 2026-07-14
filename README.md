@@ -1,3 +1,39 @@
+## common_interfaces (humble) - 4.9.2-1
+
+The packages in the `common_interfaces` repository were released into the `humble` distro by running `/usr/bin/bloom-release --rosdistro humble --track humble common_interfaces` on `Tue, 14 Jul 2026 12:11:59 -0000`
+
+These packages were released:
+- `actionlib_msgs`
+- `common_interfaces`
+- `diagnostic_msgs`
+- `geometry_msgs`
+- `nav_msgs`
+- `sensor_msgs`
+- `sensor_msgs_py`
+- `shape_msgs`
+- `std_msgs`
+- `std_srvs`
+- `stereo_msgs`
+- `trajectory_msgs`
+- `visualization_msgs`
+
+Version of package(s) in repository `common_interfaces`:
+
+- upstream repository: https://github.com/ros2/common_interfaces.git
+- release repository: https://github.com/ros2-gbp/common_interfaces-release.git
+- rosdistro version: `4.9.1-1`
+- old version: `4.9.1-1`
+- new version: `4.9.2-1`
+
+Versions of tools used:
+
+- bloom version: `0.14.3`
+- catkin_pkg version: `1.1.0`
+- rosdep version: `0.26.0`
+- rosdistro version: `1.0.1`
+- vcstools version: `0.1.42`
+
+
 ## common_interfaces (kilted) - 5.5.3-1
 
 The packages in the `common_interfaces` repository were released into the `kilted` distro by running `/usr/bin/bloom-release --rosdistro kilted --track kilted common_interfaces` on `Tue, 14 Jul 2026 12:03:13 -0000`
