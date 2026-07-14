@@ -1,27 +1,24 @@
-# common_interfaces
-Common interfaces is a metapackage (collection of packages) that includes the standard set of messages (.msg) and services (.srv) available on all ROS systems.
+# nav_msgs
 
-# List of Packages
+This package provides several messages and services for robotic navigation.
 
-The following packages are contained in the common_interfaces meta package. The links below point to Kilted Kaiju API documentation for each package.
+For more information about the navigation2 stack in ROS 2, see https://ros-planning.github.io/navigation2/.
 
-* [diagnostic_msgs](http://docs.ros.org/en/kilted/p/diagnostic_msgs/)
-* [geometry_msgs](http://docs.ros.org/en/kilted/p/geometry_msgs/)
-* [nav_msgs](http://docs.ros.org/en/kilted/p/nav_msgs/)
-* [sensor_msgs](http://docs.ros.org/en/kilted/p/sensor_msgs/)
-* [sensor_msgs_py](http://docs.ros.org/en/kilted/p/sensor_msgs_py/)
-* [shape_msgs](http://docs.ros.org/en/kilted/p/shape_msgs/)
-* [std_msgs](http://docs.ros.org/en/kilted/p/std_msgs/)
-* [std_srvs](http://docs.ros.org/en/kilted/p/std_srvs/)
-* [stereo_msgs](http://docs.ros.org/en/kilted/p/stereo_msgs/)
-* [trajectory_msgs](http://docs.ros.org/en/kilted/p/trajectory_msgs/)
-* [visualization_msgs](http://docs.ros.org/en/kilted/p/visualization_msgs/)
+For more information about ROS 2 interfaces, see [docs.ros.org](https://docs.ros.org/en/rolling/Concepts/About-ROS-Interfaces.html).
 
-## Purpose
+## Messages (.msg)
+* [GridCells](msg/GridCells.msg): An array of cells in a 2D grid.
+* [MapMetaData](msg/MapMetaData.msg): Basic information about the characteristics of the OccupancyGrid.
+* [OccupancyGrid](msg/OccupancyGrid.msg): Represents a 2-D grid map, in which each cell represents the probability of occupancy.
+* [Odometry](msg/Odometry.msg): This represents an estimate of a position and velocity in free space.
+* [Path](msg/Path.msg): An array of poses that represents a Path for a robot to follow.
+* [Trajectory](msg/Trajectory.msg): A representation of a trajectory as a series of time-stamped trajectory points.
+* [TrajectoryPoint](msg/TrajectoryPoint.msg): A single point in a trajectory.
 
-Isolating the messages to communicate between stacks in a shared dependency allows nodes in dependent stacks to communicate without requiring dependencies upon each other.
-This repository has been designed to contain the most common messages used between multiple packages to provide a shared dependency which will eliminate a problematic circular dependency.
+## Services (.srv)
+* [GetMap](srv/GetMap.srv): Get the map as a nav_msgs/OccupancyGrid.
+* [GetPlan](srv/GetPlan.srv): Get a plan from the current position to the goal Pose.
+* [SetMap](srv/SetMap.srv): Set a new map together with an initial pose.
 
-## Contributing
-
-For how to contribute see [CONTRIBUTING.md](common_interfaces/CONTRIBUTING.md)
+## Quality Declaration
+This package claims to be in the **Quality Level 2** category, see the [Quality Declaration](QUALITY_DECLARATION.md) for more details.
