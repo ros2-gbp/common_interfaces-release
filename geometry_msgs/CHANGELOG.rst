@@ -2,45 +2,20 @@
 Changelog for package geometry_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.9.3 (2026-07-14)
+5.5.3 (2026-07-14)
 ------------------
-* Add `geometry_msgs/msg/VelocityWithCovarianceStamped` (`#323 <https://github.com/ros2/common_interfaces/issues/323>`_) (`#334 <https://github.com/ros2/common_interfaces/issues/334>`_)
+* Add `geometry_msgs/msg/VelocityWithCovarianceStamped` (`#323 <https://github.com/ros2/common_interfaces/issues/323>`_) (`#335 <https://github.com/ros2/common_interfaces/issues/335>`_)
 * Contributors: mergify[bot]
 
-5.9.2 (2026-04-14)
+5.5.2 (2026-02-25)
 ------------------
+* Update Inertia.msg documentation to clarify inertia is express about the center of mass (`#313 <https://github.com/ros2/common_interfaces/issues/313>`_) (`#314 <https://github.com/ros2/common_interfaces/issues/314>`_)
+* Contributors: mergify[bot]
 
-* Clarify ``Inertia.msg`` expresses inertia about the center of mass (`#313 <https://github.com/ros2/common_interfaces/issues/313>`_)
-
-* Contributors: Andrew Symington
-
-5.9.1 (2025-10-17)
+5.5.1 (2025-10-01)
 ------------------
-
-5.9.0 (2025-10-02)
-------------------
-
-5.8.3 (2025-10-01)
-------------------
-
-5.8.2 (2025-07-29)
-------------------
-
-5.8.1 (2025-07-01)
-------------------
-* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_)
-* Contributors: mosfet80
-
-5.8.0 (2025-06-24)
-------------------
-* Removed deprecated geometry_msgs/Pose2d (`#283 <https://github.com/ros2/common_interfaces/issues/283>`_)
-* Contributors: Alejandro Hernández Cordero
-
-5.7.0 (2025-05-19)
-------------------
-
-5.6.0 (2025-04-25)
-------------------
+* Fix CMAKE deprecation (`#288 <https://github.com/ros2/common_interfaces/issues/288>`_) (`#290 <https://github.com/ros2/common_interfaces/issues/290>`_)
+* Contributors: mergify[bot]
 
 5.5.0 (2025-03-20)
 ------------------

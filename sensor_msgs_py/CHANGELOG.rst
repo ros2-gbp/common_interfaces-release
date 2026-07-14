@@ -2,35 +2,13 @@
 Changelog for package sensor_msgs_py
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.9.3 (2026-07-14)
+5.5.3 (2026-07-14)
 ------------------
 
-5.9.1 (2025-10-17)
-------------------
-* Use structured NumPy points.dtype.itemsize as default point_step in create_cloud (`#295 <https://github.com/ros2/common_interfaces/issues/295>`_)
-* Contributors: xndcn
-
-5.9.0 (2025-10-02)
+5.5.2 (2026-02-25)
 ------------------
 
-5.8.3 (2025-10-01)
-------------------
-
-5.8.2 (2025-07-29)
-------------------
-* fix setuptools deprecation (`#293 <https://github.com/ros2/common_interfaces/issues/293>`_)
-* Contributors: mosfet80
-
-5.8.1 (2025-07-01)
-------------------
-
-5.8.0 (2025-06-24)
-------------------
-
-5.7.0 (2025-05-19)
-------------------
-
-5.6.0 (2025-04-25)
+5.5.1 (2025-10-01)
 ------------------
 
 5.5.0 (2025-03-20)
