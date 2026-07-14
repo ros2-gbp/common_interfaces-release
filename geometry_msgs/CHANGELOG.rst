@@ -2,14 +2,10 @@
 Changelog for package geometry_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.10.1 (2026-07-14)
--------------------
-* use C++ 20 in default. (`#339 <https://github.com/ros2/common_interfaces/issues/339>`_)
-* Add `geometry_msgs/msg/VelocityWithCovarianceStamped` (`#323 <https://github.com/ros2/common_interfaces/issues/323>`_)
-* Contributors: Ethan J. Musser, Tomoya Fujita
-
-5.10.0 (2026-05-06)
--------------------
+5.9.3 (2026-07-14)
+------------------
+* Add `geometry_msgs/msg/VelocityWithCovarianceStamped` (`#323 <https://github.com/ros2/common_interfaces/issues/323>`_) (`#334 <https://github.com/ros2/common_interfaces/issues/334>`_)
+* Contributors: mergify[bot]
 
 5.9.2 (2026-04-14)
 ------------------

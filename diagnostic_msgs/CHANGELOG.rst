@@ -2,13 +2,8 @@
 Changelog for package diagnostic_msgs
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-5.10.1 (2026-07-14)
--------------------
-* use C++ 20 in default. (`#339 <https://github.com/ros2/common_interfaces/issues/339>`_)
-* Contributors: Tomoya Fujita
-
-5.10.0 (2026-05-06)
--------------------
+5.9.3 (2026-07-14)
+------------------
 
 5.9.1 (2025-10-17)
 ------------------
