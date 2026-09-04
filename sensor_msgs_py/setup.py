@@ -4,7 +4,7 @@ package_name = 'sensor_msgs_py'
 
 setup(
     name=package_name,
-    version='4.9.2',
+    version='5.10.2',
     packages=[package_name],
     data_files=[
         ('share/ament_index/resource_index/packages',
@@ -13,11 +13,15 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Geoffrey Biggs, Tully Foote',
-    maintainer_email='geoff@openrobotics.org, tfoote@openrobotics.org',
+    maintainer='Tully Foote',
+    maintainer_email='tfoote@openrobotics.org',
     author='Sebastian Grans',
     author_email='sebastian.grans@gmail.com',
     description='A package for easy creation and reading of PointCloud2 messages in Python.',
     license='BSD',
-    tests_require=['pytest'],
+    extras_require={
+        'test': [
+            'pytest',
+        ],
+    },
 )
