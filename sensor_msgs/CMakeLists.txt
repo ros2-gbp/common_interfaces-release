@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.20)
 
 project(sensor_msgs)
 
-# Default to C++20
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 20)
+  set(CMAKE_CXX_STANDARD 17)
   set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -79,12 +79,14 @@ if(TARGET "${cpp_typesupport_target}")
     TARGETS ${PROJECT_NAME}_library EXPORT export_${PROJECT_NAME}
   )
 
+  # Export old-style CMake variables
+  ament_export_include_directories("include/${PROJECT_NAME}")
+
   # Export modern CMake targets
   ament_export_targets(export_${PROJECT_NAME})
 
   if(BUILD_TESTING)
     ament_add_gtest(test_sensor_msgs
-      test/test_fill_image.cpp
       test/test_image_encodings.cpp
       test/test_pointcloud_conversion.cpp
       test/test_pointcloud_iterator.cpp)

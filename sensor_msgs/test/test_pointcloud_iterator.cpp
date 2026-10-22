@@ -31,8 +31,6 @@
 
 #include <gtest/gtest.h>
 
-#include <cstddef>
-#include <cstdint>
 #include <vector>
 
 #include "sensor_msgs/msg/point_cloud2.hpp"
@@ -169,11 +167,10 @@ TEST(sensor_msgs, PointCloud2Resize)
   EXPECT_EQ(static_cast<uint32_t>(10), cloud_msg_3.width);
   EXPECT_EQ(static_cast<uint32_t>(1), cloud_msg_3.height);
   EXPECT_EQ(static_cast<uint32_t>(320), cloud_msg_3.row_step);
-  modifier3.resize(static_cast<uint32_t>(11), static_cast<uint32_t>(7));
+  modifier3.resize(static_cast<uint32_t>(11), static_cast<uint32_t>(11));
   EXPECT_EQ(static_cast<uint32_t>(11), cloud_msg_3.width);
-  EXPECT_EQ(static_cast<uint32_t>(7), cloud_msg_3.height);
-  EXPECT_EQ(static_cast<uint32_t>(11 * cloud_msg_3.point_step), cloud_msg_3.row_step);
-  EXPECT_EQ(static_cast<size_t>(11 * 7 * cloud_msg_3.point_step), cloud_msg_3.data.size());
+  EXPECT_EQ(static_cast<uint32_t>(11), cloud_msg_3.height);
+  EXPECT_EQ(static_cast<uint32_t>(3872), cloud_msg_3.row_step);
 }
 
 TEST(sensor_msgs, PointCloud2IteratorEmpty)

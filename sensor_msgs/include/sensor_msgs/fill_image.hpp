@@ -32,8 +32,6 @@
 #ifndef SENSOR_MSGS__FILL_IMAGE_HPP_
 #define SENSOR_MSGS__FILL_IMAGE_HPP_
 
-#include <cstddef>
-#include <cstdint>
 #include <cstring>
 #include <string>
 
@@ -66,10 +64,7 @@ static inline bool fillImage(
   image.step = step_arg;
   size_t st0 = (step_arg * rows_arg);
   image.data.resize(st0);
-  // data[0] is undefined on an empty image
-  if (st0 > 0) {
-    std::memcpy(image.data.data(), data_arg, st0);
-  }
+  std::memcpy(&image.data[0], data_arg, st0);
 
   image.is_bigendian = 0;
   return true;

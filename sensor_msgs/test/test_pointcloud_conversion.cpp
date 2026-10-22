@@ -14,10 +14,7 @@
 
 #include <gtest/gtest.h>
 
-#include <cstddef>
-
 #include "geometry_msgs/msg/point32.hpp"
-#include "sensor_msgs/msg/channel_float32.hpp"
 #include "sensor_msgs/msg/point_cloud.hpp"
 #include "sensor_msgs/msg/point_cloud2.hpp"
 

@@ -34,12 +34,8 @@
 
 #include <sensor_msgs/msg/point_cloud.hpp>
 #include <sensor_msgs/msg/point_cloud2.hpp>
-#include <sensor_msgs/msg/point_field.hpp>
 #include <sensor_msgs/point_field_conversion.hpp>
 
-#include <cstddef>
-#include <cstdint>
-#include <cstring>
 #include <string>
 
 #ifndef SENSOR_MSGS_SKIP_WARNING
@@ -111,18 +107,18 @@ static inline bool convertPointCloudToPointCloud2(
 
   // Copy the data points
   for (size_t cp = 0; cp < input.points.size(); ++cp) {
-    std::memcpy(
+    memcpy(
       &output.data[cp * output.point_step + output.fields[0].offset],
       &input.points[cp].x, sizeof(float));
-    std::memcpy(
+    memcpy(
       &output.data[cp * output.point_step + output.fields[1].offset],
       &input.points[cp].y, sizeof(float));
-    std::memcpy(
+    memcpy(
       &output.data[cp * output.point_step + output.fields[2].offset],
       &input.points[cp].z, sizeof(float));
     for (size_t d = 0; d < input.channels.size(); ++d) {
       if (input.channels[d].values.size() == input.points.size()) {
-        std::memcpy(
+        memcpy(
           &output.data[cp * output.point_step + output.fields[3 + d].offset],
           &input.channels[d].values[cp], sizeof(float));
       }
