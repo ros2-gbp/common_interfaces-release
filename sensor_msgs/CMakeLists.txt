@@ -79,14 +79,12 @@ if(TARGET "${cpp_typesupport_target}")
     TARGETS ${PROJECT_NAME}_library EXPORT export_${PROJECT_NAME}
   )
 
-  # Export old-style CMake variables
-  ament_export_include_directories("include/${PROJECT_NAME}")
-
   # Export modern CMake targets
   ament_export_targets(export_${PROJECT_NAME})
 
   if(BUILD_TESTING)
     ament_add_gtest(test_sensor_msgs
+      test/test_fill_image.cpp
       test/test_image_encodings.cpp
       test/test_pointcloud_conversion.cpp
       test/test_pointcloud_iterator.cpp)
