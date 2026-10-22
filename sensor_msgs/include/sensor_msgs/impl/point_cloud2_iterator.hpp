@@ -36,7 +36,10 @@
 
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <cstdarg>
+#include <cstddef>
+#include <cstdint>
 #include <sstream>
+#include <stdexcept>
 #include <string>
 #include <vector>
 
@@ -259,9 +262,11 @@ PointCloud2IteratorBase<T, TT, U, C, V>::PointCloud2IteratorBase(
 {
   int offset = set_field(cloud_msg, field_name);
 
-  data_char_ = &(cloud_msg.data.front()) + offset;
+  // front() and back() are undefined on an empty cloud, so it starts at end()
+  const size_t size = cloud_msg.data.size();
+  data_char_ = size == 0 ? cloud_msg.data.data() : &cloud_msg.data.front() + offset;
   data_ = reinterpret_cast<TT *>(data_char_);
-  data_end_ = reinterpret_cast<TT *>(&(cloud_msg.data.back()) + 1 + offset);
+  data_end_ = size == 0 ? data_ : reinterpret_cast<TT *>(&cloud_msg.data.back() + 1 + offset);
 }
 
 /** Assignment operator
